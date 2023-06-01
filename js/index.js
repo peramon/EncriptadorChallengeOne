@@ -7,7 +7,7 @@ const frase_encriptada = document.querySelector(".frase-encriptada");
 
 function validarTexto(){
     let textoEscrito = document.querySelector(".frase").value;
-    let validador = textoEscrito.match(/^[a-z]*$/);
+    let validador = textoEscrito.match(/^[a-z\s]+$/);
 
     if(!validador || validador === 0) {
         alert("Solo son permitidas letras minúsculas y sin acentos")
@@ -16,20 +16,8 @@ function validarTexto(){
     }
 }
 
-
-function accionEncriptar(){
-    if(!validarTexto()) {
-        const textoEncriptado = encriptarTexto(frase.value)
-        frase_encriptada.value = textoEncriptado
-        frase_encriptada.style.backgroundImage = "none"
-        frase.value = "";
-        copia.style.display = "block"
-    
-    }
-}
-
 function encriptarTexto(stringEncriptada){
-    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"], [" ","w"]];
     stringEncriptada = stringEncriptada.toLowerCase()
 
     for(let i = 0; i < matrizCodigo.length; i++){
@@ -42,15 +30,16 @@ function encriptarTexto(stringEncriptada){
     return stringEncriptada
 }
 
-
-
-function accionDesencriptar(){
-    const textoEncriptado = desencriptarTexto(frase.value)
-    frase_encriptada.value = textoEncriptado
-    frase.value = "";
+function accionEncriptar(){
+    if(!validarTexto()) {
+        const textoEncriptado = encriptarTexto(frase.value)
+        frase_encriptada.value = textoEncriptado
+        frase_encriptada.style.backgroundImage = "none"
+        frase.value = "";
+        copia.style.display = "block"
     
+    }
 }
-
 
 function desencriptarTexto(stringDesencriptada){
     let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
@@ -64,6 +53,13 @@ function desencriptarTexto(stringDesencriptada){
 
     }
     return stringDesencriptada
+}
+
+function accionDesencriptar(){
+    const textoEncriptado = desencriptarTexto(frase.value)
+    frase_encriptada.value = textoEncriptado
+    frase.value = "";
+    
 }
 
 

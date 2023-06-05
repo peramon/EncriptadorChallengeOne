@@ -11,7 +11,7 @@ const alertaMessage = document.querySelector(".modal");
 
 
 
-copia.style.display = "none"
+// copia.style.display = "none"
 
 redesEfecto();
 

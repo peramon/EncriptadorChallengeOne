@@ -5,9 +5,9 @@
   line-height: 150%;
 }
 
-/* body {
-  background-color: azure;
-} */
+body {
+  font-family: "Raleway", sans-serif;
+}
 
 .logo-alura {
   padding-top: 10px;
@@ -47,14 +47,23 @@ main {
 ::placeholder {
   color: #0a3871;
   text-transform: none;
+  font-family: "Raleway", sans-serif;
 }
 
 .frase:focus {
   outline: none;
 }
 
+.restriccion {
+  color: #495057;
+  font-size: 18px;
+  font-weight: 500;
+}
+
 .acciones {
   display: flex;
+  width: auto;
+  height: auto;
 }
 
 .frase-encriptada {
@@ -86,7 +95,6 @@ main {
   font-size: 25px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 20px;
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -94,6 +102,7 @@ main {
   font-size: 14px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0);
+  font-weight: 600;
 }
 /* 
 section {
@@ -107,36 +116,57 @@ section {
   border-radius: 24px;
   color: white;
   cursor: pointer;
-  height: 67px;
-  width: 328px;
+  height: 60px;
+  width: 300px;
+  font-size: 20px;
+  transition: 0.5s all;
+}
+
+.accion-encriptar:hover {
+  border: 5px solid	#f3f5fc;
+  font-size: 24px;
+  
+  
 }
 
 .accion-desencriptar {
-  background: #d8dfe8;
+  background-color: rgba(0, 0, 0, 10%);
   border: 1px solid #0a3871;
   border-radius: 24px;
   color: #0a3871;
   cursor: pointer;
-  height: 67px;
+  height: 60px;
   margin-left: 30px;
-  width: 328px;
+  width: 300px;
+  font-size: 20px;
+  transition: 0.5s all;
 }
 
-.restriccion {
-  color: #495057;
-  font-size: 18px;
+.accion-desencriptar:hover {
+  border: 5px solid	#f3f5fc;
+  font-size: 24px;
 }
+
+
 
 .copiar {
+  background-color: white;
   border: 1px solid #0a3871;
   border-radius: 24px;
   color: #0a3871;
   cursor: pointer;
-  height: 67px;
+  height: 60px;
   margin-left: 100px;
   margin-top: 520px;
   position: absolute;
-  width: 336px;
+  width: 300px;
+  font-size: 20px;
+  transition: 0.5s all;
+}
+
+.copiar:hover {
+  border: 5px solid	#f3f5fc;
+  font-size: 24px;
 }
 
 /* Footer Styles */
@@ -153,7 +183,7 @@ footer {
 }
 
 .modal {
-/*   display: none; */
+  /*   display: none; */
   position: fixed;
   top: 0;
   left: 0;

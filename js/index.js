@@ -2,7 +2,10 @@ console.log('Bienvenido desarrollador Backend')
 
 const frase = document.querySelector(".frase");
 const frase_encriptada = document.querySelector(".frase-encriptada");
-
+const copia = document.querySelector(".copiar");
+const mensaje_uno = document.querySelector(".mensaje-uno");
+const mensaje_dos = document.querySelector(".mensaje-dos");
+//copia.style.display = "none"
 
 
 function validarTexto(){
@@ -27,6 +30,8 @@ function encriptarTexto(stringEncriptada){
         }
 
     }
+    mensaje_uno.textContent = "";
+    mensaje_dos.textContent = "";
     return stringEncriptada
 }
 
@@ -60,6 +65,14 @@ function accionDesencriptar(){
     frase_encriptada.value = textoEncriptado
     frase.value = "";
     
+}
+
+function copiar(){
+    frase_encriptada.select();
+    navigator.clipboard.writeText(frase_encriptada.value)
+    frase_encriptada.value = "";
+    alert("Texto Copiado");
+    frase_encriptada.reload();
 }
 
 

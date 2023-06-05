@@ -3,6 +3,8 @@
   font-weight: 400;
   font-size: 32px;
   line-height: 150%;
+  
+  
 }
 
 /* body {
@@ -15,6 +17,10 @@
   width: 10%;
 }
 
+.logo-redes{
+ margin-right: 12px;
+}
+
 main {
     display: grid;
     margin: auto 2em;
@@ -24,17 +30,25 @@ main {
     grid-row-gap: 1em;
 }
 
+.container-frase .frase{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 1em;
+  margin-left: 2em;
+}
+
 .frase {
-  height: 400px;
+  height: 450px;
   border: none;
   color: #0a3871;
   margin-top: 30px;
-  padding: 2px;
+  padding: 12px;
   text-transform: lowercase;
+  resize: none;
 }
 
 ::placeholder {
   color: #0a3871;
+  text-transform: none;
 }
 
 .frase:focus {
@@ -43,11 +57,10 @@ main {
 
 .acciones {
     display: flex;
-    margin-top: 18px;
 }
 
 .frase-encriptada {
-  height: 630px;
+  height: 530px;
   background: white;
   background-image: url("https://i.postimg.cc/KjVX56Pd/Figura-Observar-Alura.png");
   background-repeat: no-repeat;
@@ -56,9 +69,37 @@ main {
   border-radius: 24px;
   color: #0a3871;
   margin-left: 98px;
-  margin-top: 20px;
+  margin-top: 10px;
   padding-left: 20px;
-  position: fixed;
+  position: absolute;
+  resize: none;
+}
+
+.frase-encriptada::placeholder {
+  
+}
+
+.mensajes-informativo {
+  position: absolute;
+  bottom: 110px;
+  color: #0a3871;
+  margin-left: 275px;
+  background-color: rgba(0, 0, 0, 0);
+  width: 15%;
+}
+
+.mensaje-uno {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.mensaje-dos {
+  font-size: 14px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
 }
 /* 
 section {
@@ -66,10 +107,6 @@ section {
   width: 40%;
 } */
 
-.botones {
-  display: flex;
-  margin-top: 18px;
-}
 
 .accion-encriptar {
     background-color: #0A3871;
@@ -96,14 +133,30 @@ section {
     color: #495057;
     font-size:18px;
 }
-/* Footer */
 
-/* footer {
-  background-color: black;
-  text-align: center;
+.copiar {
+  border: 1px solid #0A3871;
+  border-radius: 24px;
+  color: #0A3871;
+  cursor: pointer;
+  height: 67px;
+  margin-left: 100px;
+  margin-top: 520px;
+  position: absolute;
+  width: 336px;
 }
 
-footer p {
-  color: white;
-  padding: 2em;
-} */
+/* Footer Styles */
+footer {
+  margin-top: 1em;
+  text-align: center;
+  padding: 40px;
+
+
+}
+
+.copyright {
+  font-size: 15px;
+  margin: 20px;
+  
+}

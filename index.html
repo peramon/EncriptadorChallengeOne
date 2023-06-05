@@ -13,34 +13,43 @@
     <header>
         <!-- Aqui va la a de alura -->
         <img class="logo-alura" src="https://i.postimg.cc/fyknmz9c/Logo-Alura.png" alt="Imagen del logo de alura">
-        <a href=""><img class="logo-redes" src="img/linkedin.png" alt=""></a>
-        <a href=""><img class="logo-redes" src="img/github.png" alt=""></a>
-        <a href=""><img class="logo-redes" src="img/tik-tok.png" alt=""></a>
+        <a href="https://www.linkedin.com/in/paul-enrique-ramon-suquilanda-595367161/" target="_blank"><img
+                class="logo-linkedin" src="img/linkedin.png" alt=""></a>
+        <a href="https://github.com/peramon" target="_blank"><img class="logo-github" src="img/github.png" alt=""></a>
+        <!-- <a href=""><img class="logo-redes" src="img/tik-tok.png" alt=""></a> -->
     </header>
     <main>
         <section class="container-frase">
+            <div id="miAlerta" class="modal">
+                <div class="contenido">
+                    <h2>Texto Copiado</h2>
+                    <p>El texto fue copiado coorectamente.</p>
+                    <button onclick="cerrarAlerta()">Cerrar</button>
+                </div>
+            </div>
             <textarea class="frase" name="" id="" cols="30" rows="10" placeholder="Ingrese el texto..."></textarea>
             <div>
                 <span class="restriccion">&#x1F6C8; Solo letras minúsculas y sin acentos, ojo</span>
             </div>
-            <div class="acciones"> 
+            <div class="acciones">
                 <button class="accion-encriptar" onclick="accionEncriptar()">Encriptar</button>
                 <button class="accion-desencriptar" onclick="accionDesencriptar()">Desencriptar</button>
             </div>
         </section>
         <section>
             <div>
-                <textarea class="frase-encriptada" name="" id="" cols="30" rows="10" ></textarea>'
+                <textarea class="frase-encriptada" name="" id="" cols="30" rows="10"></textarea>👨‍💻
                 <div class="mensajes-informativo">
                     <p class="mensaje-uno">Ningún mensaje fue encontrado</p>
                     <p class="mensaje-dos">Ingresa el texto que desees encriptar o desencriptar</p>
                 </div>
                 <div>
                     <button class="copiar" onclick="copiar()">Copiar</button>
-                </div>'
+                </div>
             </div>
             
-            
+
+
             <!-- <div>
                 <button>Copiar</button>
             </div> -->
@@ -49,7 +58,7 @@
 
     <footer>
         <p class="copyright">&#169; Copyright Portfolio Paul Ramón - 2023</p>
-<!--         <p>correo: peramon98.18@gmail.com</p> -->
+        <!--         <p>correo: peramon98.18@gmail.com</p> -->
     </footer>
     <script src="js/index.js"></script>
 </body>

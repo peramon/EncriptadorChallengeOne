@@ -5,8 +5,15 @@ const frase_encriptada = document.querySelector(".frase-encriptada");
 const copia = document.querySelector(".copiar");
 const mensaje_uno = document.querySelector(".mensaje-uno");
 const mensaje_dos = document.querySelector(".mensaje-dos");
-//copia.style.display = "none"
 
+// Alerta
+const alertaMessage = document.querySelector(".modal");
+
+
+
+copia.style.display = "none"
+
+redesEfecto();
 
 function validarTexto(){
     let textoEscrito = document.querySelector(".frase").value;
@@ -42,7 +49,7 @@ function accionEncriptar(){
         frase_encriptada.style.backgroundImage = "none"
         frase.value = "";
         copia.style.display = "block"
-    
+        mostrarAlerta();
     }
 }
 
@@ -71,9 +78,26 @@ function copiar(){
     frase_encriptada.select();
     navigator.clipboard.writeText(frase_encriptada.value)
     frase_encriptada.value = "";
-    alert("Texto Copiado");
-    frase_encriptada.reload();
+    alertaMessage.style.display = "block";
+    
 }
+
+function redesEfecto(){
+    const logo_linkedin = document.querySelector(".logo-linkedin")
+    const logo_github = document.querySelector(".logo-github")
+    let angulo = 0;
+    let angulo_negativo = 0;
+    setInterval(() => {
+        angulo += 5;
+        angulo_negativo -= 5;
+        logo_linkedin.style.transform = "rotate("+angulo+"deg)";
+        logo_github.style.transform = "rotate("+angulo_negativo+"deg)";
+    }, 100);
+}
+
+  function cerrarAlerta() {
+    alertaMessage.style.display = "none";
+  }
 
 
 

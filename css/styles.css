@@ -5,6 +5,17 @@
   line-height: 150%;
 }
 
+header span{
+  margin-right: 12px;
+  padding-bottom: 22px;
+  margin-top: 24px;
+}
+
+.logo-linkedin, .logo-github{
+
+  vertical-align: bottom;
+}
+
 body {
   font-family: "Raleway", sans-serif;
 }
@@ -49,6 +60,8 @@ main {
   text-transform: none;
   font-family: "Raleway", sans-serif;
 }
+
+
 
 .frase:focus {
   outline: none;
@@ -183,7 +196,7 @@ footer {
 }
 
 .modal {
-  /*   display: none; */
+    display: none;
   position: fixed;
   top: 0;
   left: 0;

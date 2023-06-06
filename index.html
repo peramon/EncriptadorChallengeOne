@@ -18,44 +18,43 @@
 <body>
     <header>
         <!-- Aqui va la a de alura -->
-        <img class="logo-alura" src="https://i.postimg.cc/fyknmz9c/Logo-Alura.png" alt="Imagen del logo de alura"><span><img src="img/arrow.png" alt=""></span>
-        <a href="https://www.linkedin.com/in/paul-enrique-ramon-suquilanda-595367161/" target="_blank"><img
-                class="logo-linkedin" src="img/linkedin.png" alt=""></a>
-        <a href="https://github.com/peramon" target="_blank"><img class="logo-github" src="img/github.png" alt=""></a>
+        <img class="logo-alura" src="https://i.postimg.cc/fyknmz9c/Logo-Alura.png" alt="Imagen del logo de alura">
         <!-- <a href=""><img class="logo-redes" src="img/tik-tok.png" alt=""></a> -->
     </header>
     <main>
         <section class="container-frase">
             <div id="miAlerta" class="modal">
-                <div class="contenido">
+                <div class="contenido" >
                     <h2>Texto Copiado</h2>
                     <p>El texto fue copiado coorectamente.</p>
-                    <button onclick="cerrarAlerta()">Cerrar</button>
+                    <!-- <button onclick="cerrarAlerta()" class="cerrar">Cerrar</button> -->
                 </div>
             </div>
-            <textarea class="frase" name="" id="" cols="30" rows="10" placeholder=""></textarea>
-            <div>
-                <span class="restriccion">&#x1F6C8; Solo letras minúsculas y sin acentos</span>
+            <div class="test">
+                <textarea class="frase" name="" id="" cols="30" rows="10" placeholder=""></textarea>
+                <span class="restriccion"> . &#x1F6C8; Solo letras minúsculas y sin acentos</span>
             </div>
             <div class="acciones">
                 <button class="accion-encriptar" onclick="accionEncriptar()">Encriptar</button>
                 <button class="accion-desencriptar" onclick="accionDesencriptar()">Desencriptar</button>
             </div>
         </section>
-        <section>
+        <section class="ecriptado">
             <div>
-                <textarea class="frase-encriptada" name="" id="" cols="30" rows="10"></textarea><span><img src="img/secret.png" alt=""></span>
+                <textarea class="frase-encriptada" name="" id="" cols="30" rows="10"></textarea><span class="secret"><img src="img/secret.png" alt=""></span>
                 <div class="mensajes-informativo">
                     <p class="mensaje-uno">Ningún mensaje fue encontrado</p>
                     <p class="mensaje-dos">Ingresa el texto que desees encriptar o desencriptar</p>
                 </div>
-                <div>
+                <div class="accion-copiar">
                     <button class="copiar" onclick="copiar()">Copiar</button>
                 </div>
             </div>
             
 
-
+            <a href="https://www.linkedin.com/in/paul-enrique-ramon-suquilanda-595367161/" target="_blank"><img
+                class="logo-linkedin" src="img/linkedin.png" alt=""></a>
+        <a href="https://github.com/peramon" target="_blank"><img class="logo-github" src="img/github.png" alt=""></a>
             <!-- <div>
                 <button>Copiar</button>
             </div> -->

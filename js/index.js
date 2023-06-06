@@ -15,11 +15,7 @@ const placeFrase = document.querySelector(".frase");
 // Desabilitar el text area del texto encriptado
 frase_encriptada.disabled = true;
 
-
-
-// copia.style.display = "none"
-
-redesEfecto();
+/* redesEfecto(); */
 repetirPlaceholder(1025);
 
 
@@ -57,12 +53,12 @@ function accionEncriptar() {
         frase_encriptada.style.backgroundImage = "none"
         frase.value = "";
         copia.style.display = "block"
-        mostrarAlerta();
+/*         mostrarAlerta(); */
     }
 }
 
 function desencriptarTexto(stringDesencriptada) {
-    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"], [" ", "w"]];
     stringDesencriptada = stringDesencriptada.toLowerCase()
 
     for (let i = 0; i < matrizCodigo.length; i++) {
@@ -87,10 +83,12 @@ function copiar() {
     navigator.clipboard.writeText(frase_encriptada.value)
     frase_encriptada.value = "";
     alertaMessage.style.display = "block";
-
+    setTimeout(() => {
+        alertaMessage.style.display = "none";
+    }, 2300);
 }
 
-function redesEfecto() {
+/* function redesEfecto() {
     const logo_linkedin = document.querySelector(".logo-linkedin")
     const logo_github = document.querySelector(".logo-github")
     let angulo = 0;
@@ -101,7 +99,7 @@ function redesEfecto() {
         logo_linkedin.style.transform = "rotate(" + angulo + "deg)";
         logo_github.style.transform = "rotate(" + angulo_negativo + "deg)";
     }, 50);
-}
+} */
 
 function cerrarAlerta() {
     alertaMessage.style.display = "none";

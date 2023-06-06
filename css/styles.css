@@ -5,13 +5,12 @@
   line-height: 150%;
 }
 
-header span{
+header span {
   margin-right: 12px;
   padding-bottom: 22px;
   margin-top: 24px;
   vertical-align: bottom;
 }
-
 
 body {
   font-family: "Raleway", sans-serif;
@@ -19,7 +18,7 @@ body {
 
 .logo-alura {
   padding-top: 10px;
-  margin-left: 10px;
+  margin-left: 100x;
   width: 10%;
 }
 
@@ -58,8 +57,6 @@ main {
   font-family: "Raleway", sans-serif;
 }
 
-
-
 .frase:focus {
   outline: none;
 }
@@ -75,6 +72,8 @@ main {
   width: auto;
   height: auto;
 }
+
+/* TODO TERMINAR LA ALERTA PERSONALIZADA */
 
 .frase-encriptada {
   height: 530px;
@@ -133,10 +132,8 @@ section {
 }
 
 .accion-encriptar:hover {
-  border: 5px solid	#f3f5fc;
+  border: 5px solid #f3f5fc;
   font-size: 24px;
-  
-  
 }
 
 .accion-desencriptar {
@@ -153,13 +150,12 @@ section {
 }
 
 .accion-desencriptar:hover {
-  border: 5px solid	#f3f5fc;
+  border: 5px solid #f3f5fc;
   font-size: 24px;
 }
 
-
-
 .copiar {
+/*   display: none; */
   background-color: white;
   border: 1px solid #0a3871;
   border-radius: 24px;
@@ -175,7 +171,7 @@ section {
 }
 
 .copiar:hover {
-  border: 5px solid	#f3f5fc;
+  border: 5px solid #f3f5fc;
   font-size: 24px;
 }
 
@@ -193,7 +189,7 @@ footer {
 }
 
 .modal {
-    display: none;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -205,8 +201,126 @@ footer {
 
 .contenido {
   background-color: white;
+  color: #0a3871;
   width: 300px;
   margin: 200px auto;
   padding: 20px;
   text-align: center;
+  border: 2px radius black;
+  border-radius: 24px;
+}
+
+.cerrar {
+  background-color: #0a3871;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 480px) {
+ 
+
+  .logo-alura{
+    float: right;
+    width: 100%;
+    padding: 10px;
+  }
+ 
+  p {
+    font-size: 14px;
+  }
+
+  .secret,.mensajes-informativo, .logo-linkedin, .logo-github, .copyright {
+    display: none;
+  }
+  
+  textarea{
+    float: left;
+  }
+
+  .frase {
+    width: 40%;
+    margin: 0px 0px 0px 0px;
+    padding: 0;
+
+  }
+
+  .frase-encriptada {
+    width: 50%;
+    margin: 0px;
+    padding: 0;
+  }
+
+  main {
+    margin: 0px;
+    padding: 0px;
+  }
+
+ main, section, div {
+    width: auto;
+  }
+  body, header, main, footer, section, div, .frase-encriptada{
+    display: grid;
+    margin: auto;
+    padding: 0px;
+    grid-template-columns: repeat(1, 1fr);
+    position: relative;
+  }
+  
+  .restriccion {
+    margin: 12px 0px;
+  }
+  .acciones {
+    width: 50%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .accion-encriptar{
+    margin-left: 48px;
+  }
+
+  .frase-encriptada {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .accion-copiar{
+    margin: 0 0 0 75px;
+    padding: 0px;
+  }
+
+  .copiar {
+    margin: 10px 0;
+    width: 150px;
+  } 
+
+  .test{
+    margin: 0;
+  }
+
+  .modal{
+
+  }
+  .contenido{
+    width: 170px;
+    height: 250px;
+    margin: 500px 0px 0 150px;
+  }
+
+}
+
+/* @media screen and (min-width: 1550px)  */
+@media screen and (min-width: 481px) and (max-width: 1080px){
+  .restriccion, .mensajes-informativo {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  .restriccion, .mensajes-informativo {
+    display: none;
+  }
 }

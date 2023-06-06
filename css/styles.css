@@ -9,12 +9,9 @@ header span{
   margin-right: 12px;
   padding-bottom: 22px;
   margin-top: 24px;
-}
-
-.logo-linkedin, .logo-github{
-
   vertical-align: bottom;
 }
+
 
 body {
   font-family: "Raleway", sans-serif;
@@ -170,7 +167,7 @@ section {
   cursor: pointer;
   height: 60px;
   margin-left: 100px;
-  margin-top: 520px;
+  margin-top: 490px;
   position: absolute;
   width: 300px;
   font-size: 20px;
